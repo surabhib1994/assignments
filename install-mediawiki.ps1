@@ -1,0 +1,2 @@
+Copy-Item "C:\Users\Surabhi\Documents\assignment-1\assignments\facter\facts.d_ves\role.yaml" "C:\ProgramData\puppetlabs\facter\facts.d"
+C:\puppet\bin\puppet\ apply --modulepath="C:\Users\Surabhi\Documents\assignment-1\assignments\modules;C:\Users\Surabhi\Documents\assignment-1\assignments\site" --hieraconfig="C:\Users\Surabhi\Documents\assignment-1\assignments\hiera\hiera.yaml"  "C:\Users\Surabhi\Documents\assignment-1\assignments\manifests\mediawiki.pp" --node_name_value=mediawiki --logdest "C:\puppetapply.txt"

@@ -1,0 +1,19 @@
+:backends:
+
+- yaml
+
+:hierarchy:
+
+- "%{::osfamily}/%{::app}/%{::role}"
+
+- "%{::osfamily}/%{::app}/downloads"
+
+- "%{::osfamily}/%{::app}/"
+
+- "%{::osfamily}/%{::osfamily}"
+
+- global
+
+:yaml:
+
+  :datadir: 'C:\Users\Surabhi\Documents\assignment-1\assignments\data'    #enter your datapath

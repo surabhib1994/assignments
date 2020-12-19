@@ -1,0 +1,7 @@
+downloads: 
+
+  :php.zip: C:\Users\Surabhi\Documents\assignment-1\assignments\packages\php.zip       #enter your php download path
+  :mysql.zip: C:\Users\Surabhi\Documents\assignment-1\assignments\packages\mysql.zip    #enter your mysql download path
+  :visualc.zip: C:\Users\Surabhi\Documents\assignment-1\assignments\packages\visualc.zip  #enter your visualc download path
+  :mediawiki.zip:C:\Users\Surabhi\Documents\assignment-1\assignments\packages\mediawiki.zip  #enter your mediawiki download path
+  

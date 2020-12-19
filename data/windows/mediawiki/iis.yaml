@@ -1,0 +1,46 @@
+mediawiki::physicalpaths:
+   'c:\inetpub':
+       ensure: directory
+   'c:\mediawiki':
+       ensure: directory
+   'c:\inetpub\logfiles':
+       ensure: directory
+   'c:\inetpub\wwwroot':
+       ensure: directory
+   'c:\mediawiki\logfiles':
+       ensure: directory
+   'c:\inetpub\logfiles\mediawiki':
+       ensure: directory
+
+mediawiki::apppools:
+   'ASP.NET version v4.0':
+        ensure: present
+        managedpipelinemode: Integrated
+        managedruntimeversion: v4.0
+        processmodel_identitytype: ApplicationPoolIdentity     
+        enable32bitapponwin64: false
+        autostart: true
+   'DefaultAppPool': 
+        ensure: present
+        managedpipelinemode: Integrated
+        managedruntimeversion: v4.0
+        processmodel_identitytype: ApplicationPoolIdentity     
+        enable32bitapponwin64: false
+        autostart: true   
+
+mediawiki::websites:
+   'Mediawiki Default website':
+        ensure: present
+        bindings: ["http://127.0.0.1/"]
+        applicationdefaults_applicationpool: DefaultAppPool
+        physicalpath: c:\inetpub\wwwroot
+        serverautostart: true
+        logfile_directory: c:\inetpub\logfiles\mediawiki
+        require:
+            - Iis_apppool[DefaultAppPool]
+            - file[c:\inetpub\wwwroot]
+            - file[c:\inetpub\logfiles\mediawiki]
+
+mediawiki::apps:
+   'Default Web Site':
+        ensure: present    

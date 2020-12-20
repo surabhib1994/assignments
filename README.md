@@ -23,3 +23,4 @@ Future Enhancements:
 2)Some of the configuration changes like uncommenting and modifying ini file can be handled via puppet files instead of with userdata.(userdata should be kept light ,without much computing complexities to reduce bootstrapping overhead.)
 3)Deployment of terraform code can be done through pipelines with Azure DevOps/Jenkins/AWS CodeDeploy.
 4)AWS Mediawiki AMI is available in AWS Marketplace which if customized can relieve puppet of the heavylifting of downloading,installing and unzipping mediawiki package.
+5)For high availability and scalibility , the ec2 server should have been deployed in ASG and LB.

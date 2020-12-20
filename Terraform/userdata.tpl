@@ -30,5 +30,6 @@ New-Item -Path 'C:\inetpub\wwwroot\phpinfo.php' -ItemType File
 Add-Content C:\inetpub\wwwroot\phpinfo.php "<?php phpinfo();"
 Write-Host "Adding PHP as FastCGI application"
 New-WebHandler -Name "PHP-FastCGI" -Path "*.php" -Verb "*" -Modules "FastCgiModule" -ScriptProcessor "c:\php\php-cgi.exe" -ResourceType File
+[system.Diagnostics.Process]::Start("iexplore","http://$hostname/mediawiki/mw-config/index.php")
 </powershell>
 

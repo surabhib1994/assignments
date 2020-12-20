@@ -1,10 +1,10 @@
 class mediawiki_config::mediawiki::mysql {
   $deploy = "mysql-installer-community-8.0.22.0.msi"
-  $on_disk = "C:\\Users\\Surabhi\\Documents\\assignment-1\\assignments\\packages\\$deploy"
+  $on_disk = "C:\\packages\\$deploy"
   
   file{ $on_disk:
     ensure => present,
-	source => 'C:\\Users\\Surabhi\\Documents\\assignment-1\\assignments\\packages\\\mysql-installer-community-8.0.22.0.msi'
+	source => 'C:\\packages\\\mysql-installer-community-8.0.22.0.msi'
     }  
   package {"mysql installation" : 
     ensure => present,

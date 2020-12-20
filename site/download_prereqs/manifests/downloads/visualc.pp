@@ -6,6 +6,6 @@ file { "C:\\Users\\Surabhi\\Documents\\assignment-1\\assignments\\packages\\vcre
 unzip { "visualc"
         source   =>   "C:/Users/Surabhi/Documents/assignment-1/assignments/packages/vcredist_x64.exe" , 
 		creates  =>   "C:/Click",
-		destination => "C:/Users/Surabhi/Documents/assignment-1/assignments/packages/"
+		destination => "C:/packages/"
 	  }
 }

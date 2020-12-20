@@ -6,6 +6,6 @@ file { "C:\\Users\\Surabhi\\Documents\\assignment-1\\assignments\\packages\\medi
 unzip { "mediawiki"
         source   =>   "C:/Users/Surabhi/Documents/assignment-1/assignments/packages/mediawiki-1.35.1.tar.gz" , 
 		creates  =>   "C:/Click",
-		destination => "C:/Users/Surabhi/Documents/assignment-1/assignments/packages/"
+		destination => "C:/packages/"
 	  }
 }

@@ -1,3 +1,3 @@
-node mediawiki {
+node desktop-emgippk {
   include roles::config
 }

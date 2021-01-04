@@ -1,9 +1,9 @@
 class profiles::config {
-contain('download_pre_reqs')
+contain('download_prereqs')
 contain('iis')
 contain('mediawiki_config')
 
-Class['download_pre_reqs']
-->class['iis']
-->class['mediawiki_config']
+Class['download_prereqs']
+->Class['iis']
+->Class['mediawiki_config']
 }

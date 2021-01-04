@@ -4,9 +4,13 @@
 
 :hierarchy:
 
+- "%{::osfamily}/%{::app}/node/%{::fqdn}
+
 - "%{::osfamily}/%{::app}/%{::role}"
 
 - "%{::osfamily}/%{::app}/downloads"
+
+- "%{::osfamily}/%{::app}/iis"
 
 - "%{::osfamily}/%{::app}/"
 

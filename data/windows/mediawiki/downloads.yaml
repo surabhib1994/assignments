@@ -1,7 +1,7 @@
 downloads: 
 
   :php.zip: C:\Users\Surabhi\Documents\assignment-1\assignments\packages\php.zip       #enter your php download path
-  :mysql.zip: C:\Users\Surabhi\Documents\assignment-1\assignments\packages\mysql-installer-community-8.0.22.0.msi enter your mysql download path
+  :mysql.msi: C:\Users\Surabhi\Documents\assignment-1\assignments\packages\mysql-installer-community-8.0.22.0.msi #enter your mysql download path
   :visualc.zip: C:\Users\Surabhi\Documents\assignment-1\assignments\packages\vcredist_x64.exe  #enter your visualc download path
-  :mediawiki.zip:C:\Users\Surabhi\Documents\assignment-1\assignments\packages\mediawiki-1.35.1.tar.gz  #enter your mediawiki download path
+  :mediawiki.zip: C:\Users\Surabhi\Documents\assignment-1\assignments\packages\mediawiki-1.35.1.tar.gz  #enter your mediawiki download path
   

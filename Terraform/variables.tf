@@ -3,10 +3,10 @@ variable "AWS_SECRET_KEY"{}
 variable "AWS_REGION"{
 default = "ap-south-1"
 }
-variable "private_key"{
-default = "mykey"
+variable "PATH_TO_PRIVATE_KEY" {
+ default = "mykey"
 } 
-variable "public_key"{ 
+variable "PATH_TO_PUBLIC_KEY" { 
 default = "mykey.pub" 
 } 
 variable "username" {} 

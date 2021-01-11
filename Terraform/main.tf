@@ -1,22 +1,34 @@
 
-data "aws_ami" "windows" {
-     most_recent = true     
-filter {
-       name   = "name"
-       values = ["Windows_Server-2016-English-Full-Base-*"]  
-  }
-}
+/*data "aws_ami" "Windows_2016" {
+ filter {
+	name = "is-public"
+	values = ["false"]
+        }
+ filter {
+	name = "name"
+	values = ["windows2016Server*"]
+		}
+most_recent = true
+owners           = ["*"]
+}*/
 
+resource "aws_key_pair" "mykey" {
+  key_name   = "mykey"
+  public_key = file(var.PATH_TO_PUBLIC_KEY)
+}
+ 
 data "template_file" "userdata" {
   template = "${file("userdata.tpl")}"
 }
 
 resource "aws_instance" "mediawikiserver" {
-    ami = data.aws_ami.windows.id
+    ami = "ami-0088977e66ac3915d" #data.aws_ami.Windows_2016.image_id
     instance_type = var.instance_type
     availability_zone = var.availability_zone
 	subnet_id = aws_subnet.mwsubnet.id
+	key_name      = aws_key_pair.mykey.key_name
 	network_interface {
+	device_index         = 0
     network_interface_id = aws_network_interface.mwinterface.id
     }
 	user_data = data.template_file.userdata.rendered
@@ -65,7 +77,7 @@ ingress {
     from_port   = 3389
     to_port     = 3389
     protocol    = "tcp"
-    cidr_blocks = [aws_vpc.main.cidr_block]
+    cidr_blocks = [aws_vpc.mwvpc.cidr_block]
   }
 ingress {
     from_port   = 80
